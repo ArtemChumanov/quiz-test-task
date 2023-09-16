@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
-import { BoxProps } from "@/components";
+//hooks
 import { useMatchBreakpoints } from "@/hooks";
+
+//components
+import { BoxProps } from "@/components";
 import { Box } from "@/components/UI-Elements";
 
 const ContainerStyled = styled(Box)`

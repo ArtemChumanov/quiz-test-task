@@ -1,6 +1,7 @@
 const baseColors = {
   primaryBackground: "#FFF0F0",
-  black: "#333333",
+  secondaryBackground: "#eaeef7",
+  lightBlack: "#333333",
   white: "#FBFBFF",
   totalBlack: "#000000",
   lightGray: "#EAEEF7",

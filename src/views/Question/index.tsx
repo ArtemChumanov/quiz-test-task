@@ -6,8 +6,7 @@ import { useRouter } from "next/router";
 import { useAnswerUser } from "@/state/answers";
 
 //components
-import { Text, Button, Container } from "@/components";
-import Flex from "@/components/UI-Elements/Flex";
+import { Text, Button, Container, Flex } from "@/components";
 
 //types
 import { IAnswer, IQuestions } from "@/types";
@@ -50,11 +49,14 @@ const QuestionView: FC<HomeProps> = ({ questions }) => {
     if (answersUsers.some((el) => el.id === id)) {
       setSelectedAnswer(answersUsers.at(-1).selectedAnswer);
     }
-  }, [answersUsers, id]);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
 
   const onSelectActiveButton = (item: IAnswer, severalAnswers: boolean) => {
     if (severalAnswers) {
-      const isSelected = selectedAnswer?.includes(item);
+      const isSelected = selectedAnswer?.some(
+        (i) => i.id === item.id && i.title === item.title,
+      );
       isSelected
         ? setSelectedAnswer((prev) => prev.filter((i) => i.id !== item.id))
         : setSelectedAnswer((prev) => (prev ? [...prev, item] : [item]));
@@ -83,7 +85,7 @@ const QuestionView: FC<HomeProps> = ({ questions }) => {
   const checkActiveButton = (btn: IAnswer, selectedAnsw: IAnswer[]) =>
     !severalAnswer
       ? btn.title === selectedAnsw[0]?.title
-      : selectedAnsw?.includes(btn);
+      : selectedAnsw?.some((i) => i.id === btn.id && i.title === btn.title);
 
   return (
     <Container mt="20px">

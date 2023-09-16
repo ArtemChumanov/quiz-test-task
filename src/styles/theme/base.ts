@@ -9,7 +9,6 @@ export type MediaQueries = {
   xl: string;
   xll: string;
   xxl: string;
-  nav: string;
 };
 
 export const breakpointMap: { [key: string]: number } = {
@@ -36,7 +35,6 @@ const mediaQueries: MediaQueries = {
   xl: `@media screen and (min-width: ${breakpointMap.xl}px)`,
   xll: `@media screen and (min-width: ${breakpointMap.xll}px)`,
   xxl: `@media screen and (min-width: ${breakpointMap.xxl}px)`,
-  nav: `@media screen and (min-width: ${breakpointMap.lg}px)`,
 };
 
 export default {

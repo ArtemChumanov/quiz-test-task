@@ -1,8 +1,9 @@
 import { IAnswer } from "./questions";
 
-type fieldForNextQuestionsTypes = {
+export type fieldForNextQuestionsTypes = {
   [key: string]: string;
 };
+
 export interface IAnswerUserState {
   answersUsers: IAnswerUser[];
   fieldForNextQuestions: fieldForNextQuestionsTypes;

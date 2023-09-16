@@ -19,13 +19,13 @@ export type ButtonProps<P extends ElementType = "button"> =
 const StyledButton = styled.button<ButtonProps>`
   position: relative;
   background: ${({ theme, $active }) =>
-    $active ? theme.colors.purpleGradient : "#eaeef7"};
+    $active ? theme.colors.purpleGradient : theme.colors.secondaryBackground};
   height: 64px;
   border-radius: 16px;
   border: 1px solid #e0e0e0;
   box-shadow: 2px 2px 6px 0 rgba(84, 60, 151, 0.25);
   color: ${({ theme, $active }) =>
-    $active ? theme.colors.white : theme.colors.black};
+    $active ? theme.colors.white : theme.colors.lightBlack};
   cursor: pointer;
 
   ${layout}
