@@ -11,8 +11,8 @@ import { Text, Button, Container, Flex } from "@/components";
 //types
 import { IAnswer, IQuestions } from "@/types";
 
-//helpers
-import { creatorQuestionTitle } from "@/helpers";
+//utils
+import { creatorQuestionTitle } from "@/utils";
 
 const ButtonWrapper = styled(Flex)`
   flex-direction: column;

@@ -36,9 +36,7 @@
       "@/styles/*": ["styles/*"],
       "@/styles": ["styles"],
       "@/types/*": ["types/*"],
-      "@/types": ["types"],
-      "@/helpers/*": ["helpers/*"],
-      "@/helpers": ["helpers"]
+      "@/types": ["types"]
     },
     "forceConsistentCasingInFileNames": true
   },

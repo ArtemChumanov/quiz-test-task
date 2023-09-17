@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { setAnswerForNextQuestions } from "@/helpers";
+import { setAnswerForNextQuestions } from "@/utils";
 import { idsSaveAnswers } from "@/config";
 import { IAnswerUser, IAnswerUserState } from "@/types";
 

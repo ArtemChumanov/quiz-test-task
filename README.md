@@ -1,4 +1,3 @@
-
 ## Getting Started
 
 First, run the development server:
@@ -11,8 +10,6 @@ yarn dev
 
 P.S. All answers during the quiz are saved in the store, but after the last question they are cleared
 and you get to the initial page again
-
-
 
 ## Learn More
 

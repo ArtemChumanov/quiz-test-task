@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { answers } from "./answers";
+import { isProduction } from "@/utils/common";
 
 const rootReducer = combineReducers({
   answers,
@@ -12,7 +13,7 @@ function makeStore() {
       getDefaultMiddleware({
         thunk: true,
       }),
-    devTools: true,
+    devTools: !isProduction,
   });
 }
 export let store = makeStore();
